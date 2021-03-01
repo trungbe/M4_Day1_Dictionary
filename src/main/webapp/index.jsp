@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <a href="/show">Got to dictionary</a>
   </body>
 </html>

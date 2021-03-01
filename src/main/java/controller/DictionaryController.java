@@ -9,12 +9,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Controller
-public class Dictionary {
-    private static Map<String, String> data = new HashMap<>();
+public class DictionaryController {
+    private static Map<String, String> map = new HashMap<>();
+
     static {
-        data.put("cat", "meo");
-        data.put("dog","cho");
+        map.put("cat", "meo meo");
+        map.put("dog", "cho");
+        map.put("paper", "giay");
+        map.put("pen", "but");
+
+
     }
+
     @GetMapping("/show")
     public ModelAndView showDictionary() {
         ModelAndView modelAndView = new ModelAndView("list");
@@ -24,8 +30,8 @@ public class Dictionary {
     @PostMapping("/dictionary")
     public ModelAndView Dictionary(String word) {
         ModelAndView modelAndView = new ModelAndView("list");
-        String result = data.get(word);
-        modelAndView.addObject("word",word);
+        String result = map.get(word);
+        modelAndView.addObject("word", word);
         modelAndView.addObject("result", result);
         return modelAndView;
     }

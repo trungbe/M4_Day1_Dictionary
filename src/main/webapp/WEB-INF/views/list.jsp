@@ -7,7 +7,9 @@
 <h1>Từ điển</h1>
 <form method="post" action="/dictionary">
     <input type="text" value="${word}" name="word">
+    <input type="submit" value="Find" >
     <h1>Từ ${word} có tiếng việt là ${result}</h1>
+
 </form>
 </body>
 </html>
